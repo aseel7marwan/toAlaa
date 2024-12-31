@@ -105,7 +105,7 @@ button:active {
     padding: 30px;
     border-radius: 25px;
     box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
-    background-image: url('envelope.svg'); /* Image of envelope */
+    background-image: url('envelope.svg');
     background-size: cover;
     background-position: center;
 }
@@ -127,8 +127,8 @@ button:active {
 }
 
 .round-image {
-    width: 170px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid #ff3366;
@@ -216,40 +216,4 @@ button:active {
 
 #scrollTopBtn:active {
     transform: scale(0.95);
-}
-
-/* Responsive Styles */
-@media (max-width: 767px) {
-    h1 {
-        font-size: 2.5em;
-    }
-
-    button {
-        padding: 12px;
-        font-size: 2.2em;
-    }
-
-    /* Hide the arrow button on smaller screens */
-    .arrow {
-        display: inline-block;
-    }
-
-    /* Style the container to be more mobile-friendly */
-    .container {
-        padding: 15px;
-    }
-
-    /* Adjust the envelope size for mobile */
-    .envelope {
-        padding: 20px;
-    }
-
-    .message-content {
-        font-size: 1.3em;
-    }
-
-    .round-image {
-        width: 150px;
-        height: 150px;
-    }
 }
