@@ -74,7 +74,6 @@ button:active {
     transform: translateY(2px);
 }
 
-/* Hide the message by default */
 .hidden {
     display: none;
 }
