@@ -49,8 +49,8 @@ h1 {
 .instructions {
     display: inline-block;
     font-size: 1.3em;
-    color: white;
-    background-color: #ff6600;
+    color: rgb(255, 255, 255);
+    background-color: #8a3c073d;
     padding: 10px 20px;
     border-radius: 25px;
     text-align: center;
@@ -122,8 +122,8 @@ h1 {
 }
 
 .round-image {
-    width: 170px;
-    height: 200px;
+    width: 150px;
+    height: 210px;
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid #ff3366;
