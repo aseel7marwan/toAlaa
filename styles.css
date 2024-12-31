@@ -52,7 +52,7 @@ h1 {
     color: #f39c12;
 }
 
-button {
+button.arrow {
     background-color: #ff6600;
     color: #fff;
     border: none;
@@ -63,14 +63,18 @@ button {
     box-shadow: 0 6px 30px rgba(0, 0, 0, 0.6);
     margin-top: 30px;
     transition: background-color 0.3s ease, transform 0.3s ease;
+    position: relative;
+    z-index: 10; /* Ensures it's above other elements */
+    display: block; /* Ensures the button is block-level */
+    margin: 0 auto; /* Centers the button */
 }
 
-button:hover {
+button.arrow:hover {
     background-color: #ff7f00;
     transform: translateY(-5px);
 }
 
-button:active {
+button.arrow:active {
     transform: translateY(2px);
 }
 
@@ -105,7 +109,7 @@ button:active {
     padding: 30px;
     border-radius: 25px;
     box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
-    background-image: url('envelope.svg'); /* Image of envelope */
+    background-image: url('envelope.svg');
     background-size: cover;
     background-position: center;
 }
@@ -224,32 +228,9 @@ button:active {
         font-size: 2.5em;
     }
 
-    button {
-        padding: 12px;
-        font-size: 2.2em;
-    }
-
-    /* Hide the arrow button on smaller screens */
-    .arrow {
-        display: none;
-    }
-
-    /* Style the container to be more mobile-friendly */
-    .container {
+    button.arrow {
         padding: 15px;
-    }
-
-    /* Adjust the envelope size for mobile */
-    .envelope {
-        padding: 20px;
-    }
-
-    .message-content {
-        font-size: 1.3em;
-    }
-
-    .round-image {
-        width: 150px;
-        height: 150px;
+        font-size: 3em; /* Make the arrow button bigger on mobile */
+        margin-top: 20px;
     }
 }
