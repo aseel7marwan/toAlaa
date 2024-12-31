@@ -105,6 +105,14 @@ button.arrow:active {
     background-image: url('envelope.svg');
     background-size: cover;
     background-position: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+}
+
+.envelope.show {
+    opacity: 1;
+    visibility: visible;
 }
 
 .message-content {
@@ -224,19 +232,4 @@ button.arrow:active {
         padding: 12px;
         font-size: 2.2em;
     }
-}
-
-/* إخفاء الرسالة الإضافية افتراضيًا */
-.hidden {
-    display: none;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-/* عند ظهور الرسالة */
-.showMessage {
-    display: block;
-    opacity: 1;
-    transform: translateY(0);
 }
