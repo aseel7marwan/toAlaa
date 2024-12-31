@@ -135,8 +135,6 @@ button:active {
     box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
 }
 
-
-
 /* Beautiful Hearts */
 .heart {
     position: absolute;
@@ -230,5 +228,28 @@ button:active {
         padding: 12px;
         font-size: 2.2em;
     }
-}
 
+    /* Hide the arrow button on smaller screens */
+    .arrow {
+        display: none;
+    }
+
+    /* Style the container to be more mobile-friendly */
+    .container {
+        padding: 15px;
+    }
+
+    /* Adjust the envelope size for mobile */
+    .envelope {
+        padding: 20px;
+    }
+
+    .message-content {
+        font-size: 1.3em;
+    }
+
+    .round-image {
+        width: 150px;
+        height: 150px;
+    }
+}
