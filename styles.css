@@ -124,16 +124,18 @@ button:active {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+    width: 100%; /* Ensure container takes full width */
+    height: 100%; /* Ensure container takes full height */
 }
 
 .round-image {
     width: 170px;
     height: 200px;
     border-radius: 50%;
-    object-fit: cover;
+    object-fit: cover; /* Ensures the image covers the entire area */
+    object-position: top center; /* Ensures the top of the image is prioritized */
     border: 5px solid #ff3366;
     box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
-    object-position: center; /* Ensure image stays centered */
 }
 
 /* Beautiful Hearts */
