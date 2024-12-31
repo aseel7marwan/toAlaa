@@ -1,8 +1,14 @@
 // Show additional message when button is clicked
 function showMessage() {
     const newMessage = document.getElementById("newMessage");
+    const instructions = document.getElementById("instructions");
+    const arrowButton = document.getElementById("arrowButton");
+
     newMessage.classList.remove("hidden");
     newMessage.classList.add("showMessage");
+    instructions.style.display = "none"; // إخفاء الرسالة
+    arrowButton.style.display = "none"; // إخفاء السهم بعد الضغط عليه
+
     window.scrollTo({
         top: document.body.scrollHeight, // Scroll to the bottom after revealing content
         behavior: "smooth",
