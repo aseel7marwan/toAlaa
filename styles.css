@@ -124,7 +124,6 @@ button:active {
     display: flex;
     justify-content: center;
     margin-top: 20px;
-
 }
 
 .round-image {
@@ -132,7 +131,7 @@ button:active {
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 15px solid #ff3366;
+    border: 5px solid #ff3366;
     box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
     object-position: center; /* Ensure image stays centered */
 }
@@ -250,9 +249,16 @@ button:active {
         font-size: 1.3em;
     }
 
+    /* Adjust the size of the image for mobile */
     .round-image {
         width: 150px;
         height: 150px;
-        object-position: top center; /* Adjust the position to avoid cutting the image */
+        object-position: center; /* Center the image */
+    }
+
+    /* Add some space around the image to prevent cut-off */
+    .image-container {
+        margin-top: 30px; /* Add space above the image */
+        padding-bottom: 30px; /* Ensure there is space below the image */
     }
 }
