@@ -229,9 +229,11 @@ button:active {
         font-size: 2.2em;
     }
 
-    /* Hide the arrow button on smaller screens */
+    /* تعديل ظهور السهم في الشاشات الصغيرة */
     .arrow {
-        display: none;
+        display: inline-block; /* تأكد من أن السهم يظهر */
+        padding: 10px; /* إضافة padding مناسب ليظهر بشكل أفضل */
+        font-size: 2em; /* تكبير حجم السهم قليلاً */
     }
 
     /* Style the container to be more mobile-friendly */
