@@ -47,26 +47,31 @@ h1 {
 }
 
 .instructions {
-    display: inline-block;
     font-size: 1.3em;
-    color: rgb(255, 255, 255);
-    background-color: #8a3c073d;
-    padding: 10px 20px;
-    border-radius: 25px;
-    text-align: center;
     margin-top: 20px;
+    color: #f39c12;
+}
+
+button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 2.5em;
     cursor: pointer;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s ease, transform 0.2s ease;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.6);
+    margin-top: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.instructions:hover {
+button:hover {
     background-color: #ff7f00;
-    transform: scale(1.05);
+    transform: translateY(-5px);
 }
 
-.instructions:active {
-    transform: scale(0.95);
+button:active {
+    transform: translateY(2px);
 }
 
 .hidden {
@@ -122,12 +127,13 @@ h1 {
 }
 
 .round-image {
-    width: 300px;
-    height: 400px;
+    width: 170px;
+    height: 200px;
     border-radius: 50%;
     object-fit: cover;
     border: 5px solid #ff3366;
     box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+    object-position: center; /* Ensure image stays centered */
 }
 
 /* Beautiful Hearts */
@@ -219,9 +225,9 @@ h1 {
         font-size: 2.5em;
     }
 
-    .instructions {
-        font-size: 1.2em;
-        padding: 8px 15px;
+    button {
+        padding: 12px;
+        font-size: 2.2em;
     }
 
     /* Hide the arrow button on smaller screens */
@@ -246,5 +252,6 @@ h1 {
     .round-image {
         width: 150px;
         height: 150px;
+        object-position: top center; /* Adjust the position to avoid cutting the image */
     }
 }
