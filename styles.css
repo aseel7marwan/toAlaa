@@ -52,6 +52,7 @@ h1 {
     color: #f39c12;
 }
 
+/* تحسين مظهر السهم */
 button.arrow {
     background-color: #ff6600;
     color: #fff;
@@ -61,43 +62,35 @@ button.arrow {
     font-size: 2.5em;
     cursor: pointer;
     box-shadow: 0 6px 30px rgba(0, 0, 0, 0.6);
-    margin-top: 30px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 50px; /* زيادة المسافة من الأعلى */
     position: relative;
-    z-index: 10; /* Ensures it's above other elements */
-    display: block; /* Ensures the button is block-level */
-    margin: 0 auto; /* Centers the button */
+    z-index: 10;
+    display: block;
+    margin: 0 auto; /* يجعل الزر في الوسط */
+    transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
+/* التفاعل مع السهم عند المرور عليه */
 button.arrow:hover {
     background-color: #ff7f00;
     transform: translateY(-5px);
 }
 
+/* التفاعل مع السهم عند الضغط عليه */
 button.arrow:active {
     transform: translateY(2px);
 }
 
-.hidden {
-    display: none;
-}
-
-.showMessage {
-    display: block;
-    margin-top: 20px;
-    font-size: 1.4em;
-    color: #ffcc99;
-    animation: fadeIn 1s ease-in-out;
-}
-
-@keyframes fadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(-20px);
+/* التأكد من أن السهم لا يختفي أو يكون قريبًا جدًا من الحواف */
+@media (max-width: 767px) {
+    h1 {
+        font-size: 2.5em;
     }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
+
+    button.arrow {
+        font-size: 3em;
+        padding: 20px; /* جعل السهم أكبر قليلاً في الجوال */
+        margin-top: 30px;
     }
 }
 
@@ -109,7 +102,7 @@ button.arrow:active {
     padding: 30px;
     border-radius: 25px;
     box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
-    background-image: url('envelope.svg');
+    background-image: url('envelope.svg'); /* Image of envelope */
     background-size: cover;
     background-position: center;
 }
@@ -228,9 +221,8 @@ button.arrow:active {
         font-size: 2.5em;
     }
 
-    button.arrow {
-        padding: 15px;
-        font-size: 3em; /* Make the arrow button bigger on mobile */
-        margin-top: 20px;
+    button {
+        padding: 12px;
+        font-size: 2.2em;
     }
 }
