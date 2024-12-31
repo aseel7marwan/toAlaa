@@ -1,9 +1,8 @@
 function showMessage() {
     const newMessage = document.getElementById("newMessage");
 
-    // إضافة كلاس "show" للرسالة الثانية
-    const envelope = document.querySelector(".envelope");
-    envelope.classList.add("show");
+    // إظهار الرسالة الثانية
+    newMessage.classList.remove("hidden");
 
     // إخفاء السهم والنصوص الإرشادية
     document.querySelector('.arrow').style.display = 'none';
