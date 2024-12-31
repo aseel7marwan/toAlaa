@@ -46,8 +46,11 @@ h1 {
     text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.6);
 }
 
-/* Styled Box for Instructions */
+/* Styled Box for Instructions with Text and Arrow */
 .instructions-box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     font-size: 1.4em;
     margin-top: 20px;
     color: #f39c12;
@@ -71,6 +74,13 @@ h1 {
 .instructions-box:active {
     transform: scale(0.98);
     box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+}
+
+.instructions-box .arrow {
+    font-size: 1.8em;
+    color: #ffcc00;
+    margin-left: 10px;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
 }
 
 .hidden {
