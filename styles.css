@@ -46,31 +46,20 @@ h1 {
     text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.6);
 }
 
-/* Styled Box for Instructions */
-.instructions-box {
+.instructions {
     font-size: 1.4em;
     margin-top: 20px;
     color: #f39c12;
-    background: rgba(255, 255, 255, 0.15);
-    border: 2px solid #f39c12;
-    border-radius: 15px;
-    padding: 20px;
-    text-align: center;
     cursor: pointer;
-    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.6);
-    transition: all 0.3s ease;
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+    text-decoration: underline;
+    font-weight: bold;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.instructions-box:hover {
-    background: rgba(255, 204, 51, 0.2);
-    border-color: #ffcc00;
-    transform: scale(1.05);
-}
-
-.instructions-box:active {
-    transform: scale(0.98);
-    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.6);
+.instructions:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
 }
 
 .hidden {
@@ -96,18 +85,127 @@ h1 {
     }
 }
 
+/* Envelope Styling */
+.envelope {
+    position: relative;
+    background-color: #fff;
+    width: 100%;
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.5);
+    background-image: url('envelope.svg'); /* Image of envelope */
+    background-size: cover;
+    background-position: center;
+}
+
+.message-content {
+    color: #ff3366;
+    font-size: 1.5em;
+    line-height: 1.5;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Image Container and Round Image */
+.image-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.round-image {
+    width: 170px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 5px solid #ff3366;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
+}
+
+/* Beautiful Hearts */
+.heart {
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #ff3366;
+    transform: rotate(-45deg);
+    z-index: -1;
+    animation: heartAnimation 2s infinite ease-in-out;
+}
+
+.heart::before,
+.heart::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    background-color: #ff3366;
+    border-radius: 50%;
+}
+
+.heart::before {
+    top: -12px;
+    left: 0;
+}
+
+.heart::after {
+    top: 0;
+    left: -12px;
+}
+
+@keyframes heartAnimation {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.3);
+    }
+}
+
+/* Heart Positions */
+.heart:nth-child(1) {
+    top: -30px;
+    left: -50px;
+}
+
+.heart:nth-child(2) {
+    top: -40px;
+    right: -30px;
+}
+
+.heart:nth-child(3) {
+    bottom: -20px;
+    left: -30px;
+}
+
 /* Responsive Styles */
 @media (max-width: 767px) {
     h1 {
         font-size: 2.5em;
     }
 
-    .instructions-box {
+    /* Adjust the clickable text for mobile */
+    .instructions {
         font-size: 1.3em;
+    }
+
+    /* Style the container to be more mobile-friendly */
+    .container {
         padding: 15px;
     }
 
-    .card {
-        padding: 20px 30px;
+    /* Adjust the envelope size for mobile */
+    .envelope {
+        padding: 20px;
+    }
+
+    .message-content {
+        font-size: 1.3em;
+    }
+
+    .round-image {
+        width: 150px;
+        height: 150px;
     }
 }
