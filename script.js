@@ -1,37 +1,17 @@
-// إظهار الرسالة عند الضغط على السهم
 function showMessage() {
     const newMessage = document.getElementById("newMessage");
 
-    // إذا كانت الرسالة مخفية، أظهرها
-    if (newMessage.classList.contains("hidden")) {
-        newMessage.classList.remove("hidden");
-        newMessage.classList.add("showMessage");
+    // إضافة كلاس "show" للرسالة الثانية
+    const envelope = document.querySelector(".envelope");
+    envelope.classList.add("show");
 
-        // التمرير إلى أسفل الصفحة
-        window.scrollTo({
-            top: document.body.scrollHeight,
-            behavior: "smooth",
-        });
+    // إخفاء السهم والنصوص الإرشادية
+    document.querySelector('.arrow').style.display = 'none';
+    document.querySelector('.instructions').style.display = 'none';
 
-        // إخفاء السهم والنصوص الإرشادية
-        document.querySelector('.arrow').style.display = 'none';
-        document.querySelector('.instructions').style.display = 'none';
-    }
-}
-
-// زر العودة للأعلى
-window.onscroll = function () {
-    const scrollTopBtn = document.getElementById("scrollTopBtn");
-    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-        scrollTopBtn.style.display = "block";
-    } else {
-        scrollTopBtn.style.display = "none";
-    }
-};
-
-function scrollToTop() {
+    // التمرير لأسفل عند إظهار الرسالة
     window.scrollTo({
-        top: 0,
+        top: document.body.scrollHeight,
         behavior: "smooth",
     });
 }
