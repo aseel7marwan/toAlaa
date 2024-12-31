@@ -3,14 +3,15 @@ function showMessage() {
     const newMessage = document.getElementById("newMessage");
     newMessage.classList.remove("hidden");
     newMessage.classList.add("showMessage");
+
     window.scrollTo({
-        top: document.body.scrollHeight, // Scroll to the bottom after revealing content
+        top: document.body.scrollHeight,
         behavior: "smooth",
     });
 
     // Hide the arrow and instruction text after showing the message
-    document.querySelector('.arrow').classList.add('hidden');
-    document.querySelector('.instructions').classList.add('hidden');
+    document.querySelector('.arrow').style.display = 'none';
+    document.querySelector('.instructions').style.display = 'none';
 }
 
 // Show or hide the scroll-to-top button based on scroll position
