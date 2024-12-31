@@ -1,20 +1,25 @@
-// Show additional message when button is clicked
+// إظهار الرسالة عند الضغط على السهم
 function showMessage() {
     const newMessage = document.getElementById("newMessage");
-    newMessage.classList.remove("hidden");
-    newMessage.classList.add("showMessage");
 
-    window.scrollTo({
-        top: document.body.scrollHeight,
-        behavior: "smooth",
-    });
+    // إذا كانت الرسالة مخفية، أظهرها
+    if (newMessage.classList.contains("hidden")) {
+        newMessage.classList.remove("hidden");
+        newMessage.classList.add("showMessage");
 
-    // Hide the arrow and instruction text after showing the message
-    document.querySelector('.arrow').style.display = 'none';
-    document.querySelector('.instructions').style.display = 'none';
+        // التمرير إلى أسفل الصفحة
+        window.scrollTo({
+            top: document.body.scrollHeight,
+            behavior: "smooth",
+        });
+
+        // إخفاء السهم والنصوص الإرشادية
+        document.querySelector('.arrow').style.display = 'none';
+        document.querySelector('.instructions').style.display = 'none';
+    }
 }
 
-// Show or hide the scroll-to-top button based on scroll position
+// زر العودة للأعلى
 window.onscroll = function () {
     const scrollTopBtn = document.getElementById("scrollTopBtn");
     if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
@@ -24,7 +29,6 @@ window.onscroll = function () {
     }
 };
 
-// Scroll to the top of the page when the button is clicked
 function scrollToTop() {
     window.scrollTo({
         top: 0,
