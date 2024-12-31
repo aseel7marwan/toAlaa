@@ -124,6 +124,7 @@ button:active {
     display: flex;
     justify-content: center;
     margin-top: 20px;
+
 }
 
 .round-image {
@@ -131,7 +132,7 @@ button:active {
     height: 200px;
     border-radius: 50%;
     object-fit: cover;
-    border: 5px solid #ff3366;
+    border: 15px solid #ff3366;
     box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
     object-position: center; /* Ensure image stays centered */
 }
