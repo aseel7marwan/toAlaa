@@ -6,31 +6,42 @@
     <title>صباحك مشرق</title>
     <link rel="stylesheet" href="styles.css">
 </head>
-
-
-
 <body>
     <div class="container">
+        <!-- البطاقة الأولى -->
         <div class="card">
             <h1 class="greeting">صباح الورد، <span id="name">قطاي</span>!</h1>
             <p id="message">
                 استقبلي يومكِ بابتسامة وتذكري أن اليوم هو فرصة جديدة لكِ لتحقيق ما تريدين. 
                 لديكِ القدرة على إشراق يومكِ بكل لحظة!
             </p>
-            <p class="instructions">اضغطي على السهم بعد قراءة الرسالة لكي تجدي المزيد من التحفيز!</p>
+            <p class="instructions">اضغطي على السهم بعد قراءة الرسالة!</p>
             <button class="arrow" onclick="showMessage()">➡️</button>
         </div>
 
-        <!-- Additional Content -->
-        <div id="newMessage" class="hidden">
-            <p>اليوم هو بداية جديدة، مليئة بالأمل والتحديات التي يمكن تحقيقها!</p>
-            <p>كل لحظة جديدة هي فرصة لكِ لإشراق يومكِ بما يليق بكِ. استمتعي بكل ثانية، لأنكِ تستحقين الأفضل!</p>
+        <!-- الرسالة الثانية داخل ظرف مع الصورة والقلوب -->
+        <div id="newMessage" class="hidden message">
+            <div class="envelope">
+                <div class="message-content">
+                    <p>اليوم هو بداية جديدة، مليئة بالأمل والتحديات التي يمكن تحقيقها!</p>
+                    <p>كل لحظة جديدة هي فرصة لكِ لإشراق يومكِ بما يليق بكِ. استمتعي بكل ثانية، لأنكِ تستحقين الأفضل!</p>
+                    <p>من أصيل</p>
+                </div>
+                <!-- صورة داخل الرسالة مع القلوب -->
+                <div class="image-container">
+                    <div class="heart"></div>
+                    <div class="heart"></div>
+                    <div class="heart"></div>
+                    <img src="love.jpg" alt="Love" class="round-image">
+                </div>
+            </div>
         </div>
     </div>
 
-    <!-- Scroll to Top Button -->
+    <!-- زر العودة للأعلى -->
     <button id="scrollTopBtn" onclick="scrollToTop()">⬆️</button>
 
+    <!-- ملف الجافاسكربت -->
     <script src="script.js"></script>
 </body>
 </html>
