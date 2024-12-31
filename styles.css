@@ -7,7 +7,7 @@
 
 body {
     font-family: 'Roboto', sans-serif;
-    background: url('bg.avif') no-repeat center center fixed, linear-gradient(135deg, #ff3366, #003366, #003300);
+    background: url('bg.jpg') no-repeat center center fixed, linear-gradient(135deg, #ff3366, #003366, #003300);
     background-size: cover;
     color: #ffffff;
     padding: 20px;
@@ -134,6 +134,8 @@ button:active {
     border: 5px solid #ff3366;
     box-shadow: 0 6px 30px rgba(0, 0, 0, 0.4);
 }
+
+
 
 /* Beautiful Hearts */
 .heart {
