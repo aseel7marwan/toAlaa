@@ -1,0 +1,136 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #ff3366, #003366, #003300);
+    color: #ffffff;
+    padding: 20px;
+    overflow-y: auto; /* Enable vertical scrolling */
+    height: 100%;
+}
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px 40px;
+    border-radius: 20px;
+    text-align: center;
+    backdrop-filter: blur(15px);
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.7);
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-size: 3.2em;
+    margin-bottom: 20px;
+    color: #ff3366;
+    text-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+}
+
+#message {
+    font-size: 1.4em;
+    margin-bottom: 20px;
+    line-height: 1.6;
+    color: #ffcc99;
+    text-shadow: 2px 2px 20px rgba(0, 0, 0, 0.6);
+}
+
+.instructions {
+    font-size: 1.3em;
+    margin-top: 20px;
+    color: #f39c12;
+}
+
+button {
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    padding: 15px;
+    font-size: 2.5em;
+    cursor: pointer;
+    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.6);
+    margin-top: 30px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: #ff7f00;
+    transform: translateY(-5px);
+}
+
+button:active {
+    transform: translateY(2px);
+}
+
+.hidden {
+    display: none;
+}
+
+.showMessage {
+    display: block;
+    margin-top: 20px;
+    font-size: 1.4em;
+    color: #ffcc99;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Scroll to Top Button */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff3366;
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 10px 15px;
+    font-size: 1.5em;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    display: none;
+    z-index: 1000;
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+#scrollTopBtn:hover {
+    background-color: #ff6699;
+    transform: scale(1.1);
+}
+
+#scrollTopBtn:active {
+    transform: scale(0.95);
+}
+
+/* Responsive Styles */
+@media (max-width: 767px) {
+    h1 {
+        font-size: 2.5em;
+    }
+
+    button {
+        padding: 12px;
+        font-size: 2.2em;
+    }
+}
