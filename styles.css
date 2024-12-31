@@ -47,31 +47,19 @@ h1 {
 }
 
 .instructions {
-    font-size: 1.3em;
+    font-size: 1.4em;
     margin-top: 20px;
     color: #f39c12;
-}
-
-button {
-    background-color: #ff6600;
-    color: #fff;
-    border: none;
-    border-radius: 50%;
-    padding: 15px;
-    font-size: 2.5em;
     cursor: pointer;
-    box-shadow: 0 6px 30px rgba(0, 0, 0, 0.6);
-    margin-top: 30px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: underline;
+    font-weight: bold;
+    display: inline-block;
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
-button:hover {
-    background-color: #ff7f00;
-    transform: translateY(-5px);
-}
-
-button:active {
-    transform: translateY(2px);
+.instructions:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
 }
 
 .hidden {
@@ -191,47 +179,15 @@ button:active {
     left: -30px;
 }
 
-/* Scroll to Top Button */
-#scrollTopBtn {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #ff3366;
-    color: white;
-    border: none;
-    border-radius: 50%;
-    padding: 10px 15px;
-    font-size: 1.5em;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-    display: none;
-    z-index: 1000;
-    transition: opacity 0.3s, transform 0.3s;
-}
-
-#scrollTopBtn:hover {
-    background-color: #ff6699;
-    transform: scale(1.1);
-}
-
-#scrollTopBtn:active {
-    transform: scale(0.95);
-}
-
 /* Responsive Styles */
 @media (max-width: 767px) {
     h1 {
         font-size: 2.5em;
     }
 
-    button {
-        padding: 12px;
-        font-size: 2.2em;
-    }
-
-    /* Hide the arrow button on smaller screens */
-    .arrow {
-        display: inline-block;
+    /* Adjust the clickable text for mobile */
+    .instructions {
+        font-size: 1.3em;
     }
 
     /* Style the container to be more mobile-friendly */
